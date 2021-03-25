@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment1">
+
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="com.mobinity.registerusingnavgraph.Fragment1"
+        android:label="fragment_1"
+        tools:layout="@layout/fragment_1" >
+        <action
+            android:id="@+id/action_fragment1_to_fragment2"
+            app:destination="@id/fragment2"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.mobinity.registerusingnavgraph.Fragment3"
+        android:label="fragment_3"
+        tools:layout="@layout/fragment_3" >
+        <action
+            android:id="@+id/action_fragment3_to_finishActivity"
+            app:destination="@id/finishActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.mobinity.registerusingnavgraph.Fragment2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment3"
+            app:destination="@id/fragment3"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <activity
+        android:id="@+id/finishActivity"
+        android:name="com.mobinity.registerusingnavgraph.FinishActivity"
+        android:label="activity_finish"
+        tools:layout="@layout/activity_finish" />
+</navigation>
