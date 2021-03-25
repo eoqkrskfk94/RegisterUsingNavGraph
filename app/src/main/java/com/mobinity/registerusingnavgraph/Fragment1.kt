@@ -22,7 +22,8 @@ class Fragment1 : Fragment() {
         val btn = view.findViewById<Button>(R.id.btn)
 
         btn.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment2)
+            val action = Fragment1Directions.actionFragment1ToFragment2(123456)
+            Navigation.findNavController(view).navigate(action)
         }
 
         return view
