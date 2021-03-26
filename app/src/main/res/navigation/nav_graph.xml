@@ -26,6 +26,10 @@
         <action
             android:id="@+id/action_fragment3_to_finishActivity"
             app:destination="@id/finishActivity" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string"
+            android:defaultValue="null" />
     </fragment>
     <fragment
         android:id="@+id/fragment2"

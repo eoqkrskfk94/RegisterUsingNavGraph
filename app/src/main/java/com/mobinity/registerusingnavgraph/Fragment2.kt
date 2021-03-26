@@ -37,7 +37,10 @@ class Fragment2 : Fragment() {
         btnNext.setOnClickListener {
             if(btnVerify.text == "인증번호 받기") Toast.makeText(requireContext(), "인증번호를 받고 입력주세요", Toast.LENGTH_SHORT).show()
             else if(edVerification.text.toString().length < 6) Toast.makeText(requireContext(), "인증번호 6자리를 입력해주세요", Toast.LENGTH_SHORT).show()
-            else if(edPhoneNumber.text.toString() != "" && edVerification.text.toString() != "") Navigation.findNavController(view).navigate(R.id.action_fragment2_to_fragment3)
+            else if(edPhoneNumber.text.toString() != "" && edVerification.text.toString() != ""){
+                val action = Fragment2Directions.actionFragment2ToFragment3(edPhoneNumber.text.toString())
+                Navigation.findNavController(view).navigate(action)
+            }
         }
 
         btnVerify.setOnClickListener {
