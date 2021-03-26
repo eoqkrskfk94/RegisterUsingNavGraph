@@ -23,8 +23,6 @@ class Fragment1 : Fragment() {
 
         val btn = view.findViewById<Button>(R.id.btn)
 
-
-
         val checkBox1 = view.findViewById<CheckBox>(R.id.cb_1)
         val checkBox2 = view.findViewById<CheckBox>(R.id.cb_2)
         val checkBox3 = view.findViewById<CheckBox>(R.id.cb_3)
@@ -39,21 +37,29 @@ class Fragment1 : Fragment() {
                 checkBox4.isChecked = true
             }
 
-            else{
-
-                checkBox2.isChecked = false
-                checkBox3.isChecked = false
-                checkBox4.isChecked = false
-            }
+//            else{
+//
+//                checkBox2.isChecked = false
+//                checkBox3.isChecked = false
+//                checkBox4.isChecked = false
+//            }
 
             btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
 
         }
 
-        checkBox2.setOnCheckedChangeListener { _, _ -> btnCheck(view, btn, checkBox2, checkBox3, checkBox4) }
-        checkBox3.setOnCheckedChangeListener { _, _ -> btnCheck(view, btn, checkBox2, checkBox3, checkBox4) }
-        checkBox4.setOnCheckedChangeListener { _, _ -> btnCheck(view, btn, checkBox2, checkBox3, checkBox4) }
-
+        checkBox2.setOnCheckedChangeListener { _, _ ->
+            btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
+            btnCheckAll(view, checkBox1, checkBox2, checkBox3, checkBox4)
+        }
+        checkBox3.setOnCheckedChangeListener { _, _ ->
+            btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
+            btnCheckAll(view, checkBox1, checkBox2, checkBox3, checkBox4)
+        }
+        checkBox4.setOnCheckedChangeListener { _, _ ->
+            btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
+            btnCheckAll(view, checkBox1, checkBox2, checkBox3, checkBox4)
+        }
 
         return view
     }
@@ -79,6 +85,15 @@ class Fragment1 : Fragment() {
             }
 
         }
+
+    }
+
+    private fun btnCheckAll(view: View, checkBox1: CheckBox, checkBox2: CheckBox, checkBox3: CheckBox, checkBox4: CheckBox){
+
+//        if(checkBox2.isChecked && checkBox3.isChecked && checkBox4.isChecked) checkBox1.isChecked = true
+//        else checkBox1.isChecked = false
+
+        checkBox1.isChecked = checkBox2.isChecked && checkBox3.isChecked && checkBox4.isChecked
 
     }
 
