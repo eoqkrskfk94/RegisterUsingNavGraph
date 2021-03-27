@@ -30,7 +30,7 @@ class Fragment3 : Fragment() {
         binding.edPhoneNumber.setText(phoneNumber)
 
         binding.btnNext.setOnClickListener {
-            if(binding.edPassword.text.toString() == binding.edPasswordVerify.text.toString()) Navigation.findNavController(view).navigate(R.id.finishActivity)
+            if(binding.edPassword.text.toString() == binding.edPasswordVerify.text.toString()) Navigation.findNavController(view).navigate(R.id.action_fragment3_to_fragment4)
             else Toast.makeText(requireContext(), "비밀번호가 일치하지 않습니다", Toast.LENGTH_SHORT).show()
         }
 

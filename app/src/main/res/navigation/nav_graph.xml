@@ -23,13 +23,13 @@
         android:name="com.mobinity.registerusingnavgraph.Fragment3"
         android:label="fragment_3"
         tools:layout="@layout/fragment_3" >
-        <action
-            android:id="@+id/action_fragment3_to_finishActivity"
-            app:destination="@id/finishActivity" />
         <argument
             android:name="phoneNumber"
             app:argType="string"
             android:defaultValue="null" />
+        <action
+            android:id="@+id/action_fragment3_to_fragment4"
+            app:destination="@id/fragment4" />
     </fragment>
     <fragment
         android:id="@+id/fragment2"
@@ -49,4 +49,9 @@
         android:name="com.mobinity.registerusingnavgraph.FinishActivity"
         android:label="activity_finish"
         tools:layout="@layout/activity_finish" />
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.mobinity.registerusingnavgraph.Fragment4"
+        android:label="fragment_4"
+        tools:layout="@layout/fragment_4" />
 </navigation>
