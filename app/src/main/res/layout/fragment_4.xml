@@ -26,7 +26,6 @@
             app:layout_constraintWidth_percent="0.8" />
 
 
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,12 +57,12 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_marginTop="55dp"
+            android:hint="이름을 입력해주세요"
             android:inputType="text"
             android:maxLines="1"
-            android:textColor="@color/black"
             android:paddingLeft="10dp"
             android:singleLine="true"
-            android:hint="이름을 입력해주세요"
+            android:textColor="@color/black"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="@+id/tv_1"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -75,8 +74,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="성별"
-            android:textSize="15dp"
             android:textColor="@color/black"
+            android:textSize="15dp"
             app:layout_constraintBottom_toTopOf="@id/til_gender"
             app:layout_constraintStart_toStartOf="@id/til_gender"
             app:layout_constraintTop_toTopOf="parent"
@@ -84,44 +83,46 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_gender"
-            android:layout_width="0dp"
-            android:layout_marginTop="55dp"
-            app:boxBackgroundColor="@color/white"
-            android:paddingLeft="5dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="0dp"
             android:layout_height="60dp"
+            android:layout_marginTop="55dp"
+            android:paddingLeft="5dp"
+            app:boxBackgroundColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/ed_name"
             app:layout_constraintStart_toStartOf="@id/ed_name"
             app:layout_constraintTop_toBottomOf="@id/ed_name">
 
             <AutoCompleteTextView
+                android:id="@+id/actv_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="none" />
+                android:inputType="none"
+                android:textSize="15dp" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
 
 
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/til_birthday"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_marginTop="55dp"-->
-<!--            app:boxBackgroundColor="@color/white"-->
-<!--            android:paddingLeft="5dp"-->
-<!--            android:layout_height="60dp"-->
-<!--            app:layout_constraintEnd_toEndOf="@id/til_gender"-->
-<!--            app:layout_constraintStart_toStartOf="@id/til_gender"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/til_gender">-->
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/til_birthday"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_marginTop="55dp"-->
+        <!--            app:boxBackgroundColor="@color/white"-->
+        <!--            android:paddingLeft="5dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/til_gender"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/til_gender"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/til_gender">-->
 
-<!--            <AutoCompleteTextView-->
-<!--                android:id="@+id/actv_birthday"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:inputType="none" />-->
+        <!--            <AutoCompleteTextView-->
+        <!--                android:id="@+id/actv_birthday"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:inputType="none" />-->
 
 
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
 
         <TextView
@@ -129,8 +130,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="생년월일"
-            android:textSize="15dp"
             android:textColor="@color/black"
+            android:textSize="15dp"
             app:layout_constraintBottom_toTopOf="@id/ed_birthday"
             app:layout_constraintStart_toStartOf="@id/ed_birthday"
             app:layout_constraintTop_toTopOf="parent"
@@ -141,9 +142,9 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_marginTop="55dp"
-            android:hint="생년월일을 입력해주세요"
             android:clickable="false"
             android:focusable="false"
+            android:hint="생년월일을 입력해주세요"
             android:maxLines="1"
             android:paddingLeft="10dp"
             android:singleLine="true"
