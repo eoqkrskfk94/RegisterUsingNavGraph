@@ -27,8 +27,6 @@ class Fragment5 : Fragment() {
         _binding = Fragment5Binding.inflate(inflater, container, false)
         val view = binding.root
 
-        cameraBtnClick()
-
         return view
     }
 

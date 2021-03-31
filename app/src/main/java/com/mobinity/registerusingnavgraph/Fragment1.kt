@@ -21,6 +21,12 @@ class Fragment1 : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_1, container, false)
 
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val btn = view.findViewById<Button>(R.id.btn)
 
         val checkBox1 = view.findViewById<CheckBox>(R.id.cb_1)
@@ -60,8 +66,6 @@ class Fragment1 : Fragment() {
             btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
             btnCheckAll(view, checkBox1, checkBox2, checkBox3, checkBox4)
         }
-
-        return view
     }
 
 

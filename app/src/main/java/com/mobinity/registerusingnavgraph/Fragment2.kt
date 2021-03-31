@@ -25,6 +25,12 @@ class Fragment2 : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_2, container, false)
 
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val btnNext = view.findViewById<Button>(R.id.btn_next)
         val btnVerify = view.findViewById<Button>(R.id.btn_verify)
 
@@ -55,7 +61,6 @@ class Fragment2 : Fragment() {
 
         }
 
-        return view
     }
 
 

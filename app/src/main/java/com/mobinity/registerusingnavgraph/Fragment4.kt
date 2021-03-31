@@ -24,6 +24,12 @@ class Fragment4 : Fragment() {
         _binding = Fragment4Binding.inflate(inflater, container, false)
         val view = binding.root
 
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         binding.edBirthday.setOnClickListener {
 
             val builder = MaterialDatePicker.Builder.datePicker()
@@ -44,8 +50,6 @@ class Fragment4 : Fragment() {
         }
 
         setGenderEditText()
-
-        return view
     }
 
     private fun setGenderEditText(){

@@ -26,6 +26,13 @@ class Fragment3 : Fragment() {
         _binding = Fragment3Binding.inflate(inflater, container, false)
         val view = binding.root
 
+
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         phoneNumber = args.phoneNumber
         binding.edPhoneNumber.setText(phoneNumber)
 
@@ -34,8 +41,6 @@ class Fragment3 : Fragment() {
             else Toast.makeText(requireContext(), "비밀번호가 일치하지 않습니다", Toast.LENGTH_SHORT).show()
         }
 
-
-        return view
     }
 
     override fun onDestroy() {
