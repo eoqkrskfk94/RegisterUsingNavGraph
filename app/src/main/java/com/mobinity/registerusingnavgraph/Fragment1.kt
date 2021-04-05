@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.navigation.Navigation
 
@@ -33,6 +34,10 @@ class Fragment1 : Fragment() {
         val checkBox2 = view.findViewById<CheckBox>(R.id.cb_2)
         val checkBox3 = view.findViewById<CheckBox>(R.id.cb_3)
         val checkBox4 = view.findViewById<CheckBox>(R.id.cb_4)
+
+        val arrow1 = view.findViewById<ImageView>(R.id.iv_arrow_1)
+        val arrow2 = view.findViewById<ImageView>(R.id.iv_arrow_2)
+        val arrow3 = view.findViewById<ImageView>(R.id.iv_arrow_3)
 
 
         checkBox1.setOnCheckedChangeListener { _, isChecked ->
@@ -66,6 +71,17 @@ class Fragment1 : Fragment() {
             btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
             btnCheckAll(view, checkBox1, checkBox2, checkBox3, checkBox4)
         }
+
+        checkBoxDetailBtnClick(view, arrow1, arrow2, arrow3)
+    }
+
+    private fun checkBoxDetailBtnClick(view: View, arrow1: ImageView, arrow2: ImageView, arrow3: ImageView){
+
+        arrow1.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment11)
+        }
+
+
     }
 
 

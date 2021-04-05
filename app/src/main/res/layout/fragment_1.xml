@@ -57,30 +57,82 @@
             app:layout_constraintEnd_toEndOf="@id/tv_1"
             app:layout_constraintTop_toBottomOf="@id/cv_1">
 
-            <CheckBox
-                android:id="@+id/cb_2"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="서비스 이용약관"/>
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/cb_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="개인정보 취급방침"/>
+                <CheckBox
+                    android:id="@+id/cb_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="서비스 이용약관"/>
 
-            <CheckBox
-                android:id="@+id/cb_4"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/iv_arrow_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="25dp"
+                    android:layout_weight="5"
+                    android:src="@drawable/arrow_right"
+                    app:tint="@color/black" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="위탁기반 서비스 이용약관"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="개인정보 취급방침"/>
+
+                <ImageView
+                    android:id="@+id/iv_arrow_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:paddingLeft="25dp"
+                    android:src="@drawable/arrow_right"
+                    app:tint="@color/black" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="위탁기반 서비스 이용약관"/>
+
+                <ImageView
+                    android:id="@+id/iv_arrow_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:paddingLeft="25dp"
+                    android:src="@drawable/arrow_right"
+                    app:tint="@color/black" />
+
+
+            </LinearLayout>
+
 
 
 
         </LinearLayout>
-
-
-
 
 
 
