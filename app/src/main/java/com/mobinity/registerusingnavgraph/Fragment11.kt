@@ -32,7 +32,6 @@ class Fragment11 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         binding.wb1.settings.builtInZoomControls = true
         binding.wb1.settings.domStorageEnabled = true
         binding.wb1.scrollBarStyle = WebView.SCROLLBARS_OUTSIDE_INSET
