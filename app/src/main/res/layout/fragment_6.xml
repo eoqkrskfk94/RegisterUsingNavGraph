@@ -1,14 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment6">
+    tools:context=".Fragment4">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="     6/6\n입금받으실 계좌번호를\n입력해주세요."
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07"
+            app:layout_constraintWidth_percent="0.8" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/abc_vector_test"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.068"
+            app:tint="@color/black" />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="예금주"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@id/ed_name"
+            app:layout_constraintStart_toStartOf="@id/ed_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+
+        <EditText
+            android:id="@+id/ed_name"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="55dp"
+            android:hint="예금주 이름을 입력해주세요"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/tv_1"
+            app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="은행명"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@id/til_bank_name"
+            app:layout_constraintStart_toStartOf="@id/til_bank_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_bank_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="55dp"
+            android:paddingLeft="5dp"
+            app:boxBackgroundColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/ed_name"
+            app:layout_constraintStart_toStartOf="@id/ed_name"
+            app:layout_constraintTop_toBottomOf="@id/ed_name">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textSize="15dp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/til_birthday"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_marginTop="55dp"-->
+        <!--            app:boxBackgroundColor="@color/white"-->
+        <!--            android:paddingLeft="5dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="@id/til_gender"-->
+        <!--            app:layout_constraintStart_toStartOf="@id/til_gender"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/til_gender">-->
+
+        <!--            <AutoCompleteTextView-->
+        <!--                android:id="@+id/actv_birthday"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:inputType="none" />-->
+
+
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+        <TextView
+            android:id="@+id/tv_bank_account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계좌번호"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@id/ed_bank_account_number"
+            app:layout_constraintStart_toStartOf="@id/ed_bank_account_number"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
+
+        <EditText
+            android:id="@+id/ed_bank_account_number"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="55dp"
+            android:hint="계좌번호를 입력해주세요"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@id/tv_1"
+            app:layout_constraintStart_toStartOf="@id/tv_1"
+            app:layout_constraintTop_toBottomOf="@id/til_bank_name" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/black"
+            android:text="다음"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.9"
+            app:layout_constraintWidth_percent="0.8" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

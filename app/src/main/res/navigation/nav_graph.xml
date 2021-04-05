@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragment5">
+    app:startDestination="@id/fragment6">
 
     <fragment
         android:id="@+id/fragment1"
@@ -71,5 +71,13 @@
         android:id="@+id/fragment6"
         android:name="com.mobinity.registerusingnavgraph.Fragment6"
         android:label="fragment_6"
-        tools:layout="@layout/fragment_6" />
+        tools:layout="@layout/fragment_6" >
+        <action
+            android:id="@+id/action_fragment6_to_fragment7"
+            app:destination="@id/fragment7" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment7"
+        android:name="com.mobinity.registerusingnavgraph.Fragment7"
+        android:label="Fragment7" />
 </navigation>

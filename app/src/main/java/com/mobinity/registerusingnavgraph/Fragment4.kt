@@ -54,7 +54,7 @@ class Fragment4 : Fragment() {
 
     private fun setGenderEditText(){
         val genders = listOf("남성", "여성")
-        val adapter = ArrayAdapter(requireContext(), R.layout.gender_list, genders)
+        val adapter = ArrayAdapter(requireContext(), R.layout.spinner_list, genders)
         binding.actvGender.setAdapter(adapter)
 
     }
