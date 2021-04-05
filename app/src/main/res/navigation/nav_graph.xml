@@ -62,5 +62,14 @@
         android:id="@+id/fragment5"
         android:name="com.mobinity.registerusingnavgraph.Fragment5"
         android:label="fragment_5"
-        tools:layout="@layout/fragment_5" />
+        tools:layout="@layout/fragment_5" >
+        <action
+            android:id="@+id/action_fragment5_to_fragment6"
+            app:destination="@id/fragment6" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment6"
+        android:name="com.mobinity.registerusingnavgraph.Fragment6"
+        android:label="fragment_6"
+        tools:layout="@layout/fragment_6" />
 </navigation>

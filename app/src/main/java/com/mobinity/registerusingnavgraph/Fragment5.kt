@@ -15,6 +15,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.FileProvider
+import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
 import com.mobinity.registerusingnavgraph.databinding.Fragment5Binding
 import java.io.File
@@ -33,6 +34,8 @@ class Fragment5 : Fragment() {
     private lateinit var currentPhotoPath: String
     var photoFile: File? = null
 
+    private var imageCapture: Boolean = false
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,9 +44,21 @@ class Fragment5 : Fragment() {
         _binding = Fragment5Binding.inflate(inflater, container, false)
         val view = binding.root
 
-        cameraBtnClick()
+
 
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        cameraBtnClick()
+
+        binding.btnNext.setOnClickListener {
+
+            if(imageCapture) Navigation.findNavController(view).navigate(R.id.action_fragment5_to_fragment6)
+            else Toast.makeText(requireContext(), "신분증을 촬영해주세요.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun cameraBtnClick(){
@@ -139,12 +154,15 @@ class Fragment5 : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
 
+            println(photoFile)
+
             cropImageFromCamera()
 
         }
 
         else if (requestCode == CROP_FROM_CAMERA && resultCode == RESULT_OK){
 
+            imageCapture = true
             Glide.with(this).load(photoFile).into(binding.ivIdentificationCard)
         }
     }
