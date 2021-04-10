@@ -10,8 +10,12 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.navigation.Navigation
+import com.mobinity.registerusingnavgraph.databinding.Fragment1Binding
 
 class Fragment1 : Fragment() {
+
+    private var _binding: Fragment1Binding? = null
+    private val binding get() = _binding!!
 
 
 
@@ -19,8 +23,8 @@ class Fragment1 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_1, container, false)
+        _binding = Fragment1Binding.inflate(inflater, container, false)
+        val view = binding.root
 
         return view
     }
@@ -28,24 +32,15 @@ class Fragment1 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val btn = view.findViewById<Button>(R.id.btn)
-
-        val checkBox1 = view.findViewById<CheckBox>(R.id.cb_1)
-        val checkBox2 = view.findViewById<CheckBox>(R.id.cb_2)
-        val checkBox3 = view.findViewById<CheckBox>(R.id.cb_3)
-        val checkBox4 = view.findViewById<CheckBox>(R.id.cb_4)
-
-        val arrow1 = view.findViewById<ImageView>(R.id.iv_arrow_1)
-        val arrow2 = view.findViewById<ImageView>(R.id.iv_arrow_2)
-        val arrow3 = view.findViewById<ImageView>(R.id.iv_arrow_3)
 
 
-        checkBox1.setOnCheckedChangeListener { _, isChecked ->
+        binding.cb1.setOnCheckedChangeListener { _, isChecked ->
 
             if(isChecked){
-                checkBox2.isChecked = true
-                checkBox3.isChecked = true
-                checkBox4.isChecked = true
+
+                binding.cb2.isChecked = true
+                binding.cb3.isChecked = true
+                binding.cb4.isChecked = true
             }
 
 //            else{
@@ -55,24 +50,24 @@ class Fragment1 : Fragment() {
 //                checkBox4.isChecked = false
 //            }
 
-            btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
+            btnCheck(view, binding.btn, binding.cb2, binding.cb3, binding.cb4)
 
         }
 
-        checkBox2.setOnCheckedChangeListener { _, _ ->
-            btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
-            btnCheckAll(view, checkBox1, checkBox2, checkBox3, checkBox4)
+        binding.cb2.setOnCheckedChangeListener { _, _ ->
+            btnCheck(view, binding.btn, binding.cb2, binding.cb3, binding.cb4)
+            btnCheckAll(view, binding.cb1, binding.cb2, binding.cb3, binding.cb4)
         }
-        checkBox3.setOnCheckedChangeListener { _, _ ->
-            btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
-            btnCheckAll(view, checkBox1, checkBox2, checkBox3, checkBox4)
+        binding.cb3.setOnCheckedChangeListener { _, _ ->
+            btnCheck(view, binding.btn, binding.cb2, binding.cb3, binding.cb4)
+            btnCheckAll(view, binding.cb1, binding.cb2, binding.cb3, binding.cb4)
         }
-        checkBox4.setOnCheckedChangeListener { _, _ ->
-            btnCheck(view, btn, checkBox2, checkBox3, checkBox4)
-            btnCheckAll(view, checkBox1, checkBox2, checkBox3, checkBox4)
+        binding.cb4.setOnCheckedChangeListener { _, _ ->
+            btnCheck(view, binding.btn, binding.cb2, binding.cb3, binding.cb4)
+            btnCheckAll(view, binding.cb1, binding.cb2, binding.cb3, binding.cb4)
         }
 
-        checkBoxDetailBtnClick(view, arrow1, arrow2, arrow3)
+        checkBoxDetailBtnClick(view, binding.ivArrow1, binding.ivArrow2, binding.ivArrow3)
     }
 
     private fun checkBoxDetailBtnClick(view: View, arrow1: ImageView, arrow2: ImageView, arrow3: ImageView){
