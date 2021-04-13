@@ -5,10 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import androidx.navigation.Navigation
 import com.mobinity.registerusingnavgraph.databinding.Fragment1Binding
 
@@ -67,12 +64,12 @@ class Fragment1 : Fragment() {
             btnCheckAll(view, binding.cb1, binding.cb2, binding.cb3, binding.cb4)
         }
 
-        checkBoxDetailBtnClick(view, binding.ivArrow1, binding.ivArrow2, binding.ivArrow3)
+        checkBoxDetailBtnClick(view, binding.tv2, binding.tv3, binding.tv4)
     }
 
-    private fun checkBoxDetailBtnClick(view: View, arrow1: ImageView, arrow2: ImageView, arrow3: ImageView){
+    private fun checkBoxDetailBtnClick(view: View, tv2: TextView, tv3: TextView, tv4: TextView){
 
-        arrow1.setOnClickListener {
+        tv2.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment11)
         }
 

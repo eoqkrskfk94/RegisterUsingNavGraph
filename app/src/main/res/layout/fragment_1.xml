@@ -66,15 +66,23 @@
                     android:id="@+id/cb_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="7" />
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
                     android:text="서비스 이용약관"/>
 
                 <ImageView
-                    android:id="@+id/iv_arrow_1"
+                    android:id="@+id/iv_arrow_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:paddingLeft="25dp"
-                    android:layout_weight="5"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="7"
                     android:src="@drawable/arrow_right"
                     app:tint="@color/black" />
 
@@ -90,15 +98,23 @@
                     android:id="@+id/cb_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="7" />
+
+                <TextView
+                    android:id="@+id/tv_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
                     android:text="개인정보 취급방침"/>
 
                 <ImageView
-                    android:id="@+id/iv_arrow_2"
+                    android:id="@+id/iv_arrow_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:paddingLeft="25dp"
+                    android:layout_weight="7"
+                    android:paddingLeft="10dp"
                     android:src="@drawable/arrow_right"
                     app:tint="@color/black" />
 
@@ -114,15 +130,23 @@
                     android:id="@+id/cb_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="7" />
+
+                <TextView
+                    android:id="@+id/tv_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
                     android:text="위탁기반 서비스 이용약관"/>
 
                 <ImageView
-                    android:id="@+id/iv_arrow_3"
+                    android:id="@+id/iv_arrow_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:paddingLeft="25dp"
+                    android:layout_weight="7"
+                    android:paddingLeft="10dp"
                     android:src="@drawable/arrow_right"
                     app:tint="@color/black" />
 
