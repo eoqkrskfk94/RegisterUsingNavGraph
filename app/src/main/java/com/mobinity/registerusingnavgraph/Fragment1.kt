@@ -1,11 +1,14 @@
 package com.mobinity.registerusingnavgraph
 
+import android.app.UiModeManager
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.Navigation
 import com.mobinity.registerusingnavgraph.databinding.Fragment1Binding
 
@@ -28,7 +31,6 @@ class Fragment1 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
 
         binding.cb1.setOnCheckedChangeListener { _, isChecked ->
@@ -70,7 +72,18 @@ class Fragment1 : Fragment() {
     private fun checkBoxDetailBtnClick(view: View, tv2: TextView, tv3: TextView, tv4: TextView){
 
         tv2.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_fragment1_to_fragment11)
+            val action = Fragment1Directions.actionFragment1ToFragment11("1")
+            Navigation.findNavController(view).navigate(action)
+        }
+
+        tv3.setOnClickListener {
+            val action = Fragment1Directions.actionFragment1ToFragment11("2")
+            Navigation.findNavController(view).navigate(action)
+        }
+
+        tv4.setOnClickListener {
+            val action = Fragment1Directions.actionFragment1ToFragment11("3")
+            Navigation.findNavController(view).navigate(action)
         }
 
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Fragment1">
 
 
@@ -32,12 +33,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:cardCornerRadius="10dp"
+            android:backgroundTint="@color/white"
             android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="@id/tv_1"
             app:layout_constraintEnd_toEndOf="@id/tv_1"
             app:layout_constraintTop_toBottomOf="@id/tv_1">
 
             <CheckBox
+                android:textColor="@color/black"
                 android:id="@+id/cb_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -75,7 +78,7 @@
                     android:layout_weight="2"
                     android:gravity="center_vertical"
                     android:textColor="@color/black"
-                    android:text="서비스 이용약관"/>
+                    android:text="개인정보 이용 및 수집 동의서"/>
 
                 <ImageView
                     android:id="@+id/iv_arrow_2"
@@ -107,7 +110,7 @@
                     android:layout_weight="2"
                     android:gravity="center_vertical"
                     android:textColor="@color/black"
-                    android:text="개인정보 취급방침"/>
+                    android:text="위치기반거비스 이용약관"/>
 
                 <ImageView
                     android:id="@+id/iv_arrow_3"
@@ -139,7 +142,7 @@
                     android:layout_weight="2"
                     android:gravity="center_vertical"
                     android:textColor="@color/black"
-                    android:text="위탁기반 서비스 이용약관"/>
+                    android:text="배송업무 위탁계약서"/>
 
                 <ImageView
                     android:id="@+id/iv_arrow_4"

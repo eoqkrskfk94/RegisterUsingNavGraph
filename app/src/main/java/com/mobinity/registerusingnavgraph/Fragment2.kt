@@ -15,7 +15,6 @@ import com.mobinity.registerusingnavgraph.databinding.Fragment2Binding
 
 class Fragment2 : Fragment() {
 
-    val args: Fragment2Args by navArgs()
     private var _binding: Fragment2Binding? = null
     private val binding get() = _binding!!
 

@@ -13,26 +13,13 @@
         <action
             android:id="@+id/action_fragment1_to_fragment2"
             app:destination="@id/fragment2" />
+        <action
+            android:id="@+id/action_fragment1_to_fragment11"
+            app:destination="@id/fragment11" />
         <argument
             android:name="name"
             app:argType="string"
             android:defaultValue="null" />
-        <action
-            android:id="@+id/action_fragment1_to_fragment11"
-            app:destination="@id/fragment11" />
-    </fragment>
-    <fragment
-        android:id="@+id/fragment3"
-        android:name="com.mobinity.registerusingnavgraph.Fragment3"
-        android:label="fragment_3"
-        tools:layout="@layout/fragment_3" >
-        <argument
-            android:name="phoneNumber"
-            app:argType="string"
-            android:defaultValue="null" />
-        <action
-            android:id="@+id/action_fragment3_to_fragment4"
-            app:destination="@id/fragment4" />
     </fragment>
     <fragment
         android:id="@+id/fragment2"
@@ -46,6 +33,19 @@
             android:name="number"
             app:argType="integer"
             android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.mobinity.registerusingnavgraph.Fragment3"
+        android:label="fragment_3"
+        tools:layout="@layout/fragment_3" >
+        <argument
+            android:name="phoneNumber"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_fragment3_to_fragment4"
+            app:destination="@id/fragment4" />
     </fragment>
     <activity
         android:id="@+id/finishActivity"
@@ -87,5 +87,10 @@
         android:id="@+id/fragment11"
         android:name="com.mobinity.registerusingnavgraph.Fragment11"
         android:label="fragment_11"
-        tools:layout="@layout/fragment_11" />
+        tools:layout="@layout/fragment_11" >
+        <argument
+            android:name="agreementType"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
 </navigation>

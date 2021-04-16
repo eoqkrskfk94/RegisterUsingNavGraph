@@ -1,9 +1,11 @@
 package com.mobinity.registerusingnavgraph
 
 import android.Manifest
+import android.app.UiModeManager
 import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.fragment.NavHostFragment
 
 class MainActivity : AppCompatActivity() {
